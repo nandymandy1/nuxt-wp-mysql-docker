@@ -1,0 +1,319 @@
+@font-face {
+  font-family: SFProRegular;
+  src: url(../fonts/FontsFree-Net-SFProText-Regular.ttf);
+}
+
+@font-face {
+  font-family: SFProBold;
+  src: url(../fonts/SFUIText-Bold.woff);
+}
+
+@font-face {
+  font-family: SFProBoldItalic;
+  src: url(../fonts/SFUIText-BoldItalic.woff);
+}
+
+@font-face {
+  font-family: SFProBoldHeavy;
+  src: url(../fonts/SFUIText-Heavy.woff);
+}
+
+body {
+  font-family: SFProRegular !important;
+}
+
+.category-tab {
+  height: 40px !important;
+  width: 150px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  border-radius: 75px !important;
+  cursor: pointer !important;
+  transition: 0.35s ease-in;
+  &-active {
+    font-family: SFProBold;
+    background-color: #f1f1f1;
+    cursor: pointer !important;
+  }
+  &:hover {
+    font-family: SFProBold;
+    background-color: #f1f1f1;
+    cursor: pointer !important;
+  }
+}
+
+.footer {
+  background-color: #d8d8d8 !important;
+  a {
+    color: #000;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.skeleton-loader {
+  height: 40px !important;
+  width: 200px !important;
+  border-radius: 75px !important;
+}
+
+.social-links {
+  color: #000;
+  &:hover {
+    color: #000 !important;
+  }
+}
+
+.newsletter- {
+  &input {
+    height: 55px;
+    width: 100%;
+    border: none !important;
+    border-radius: 0px !important;
+    box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.08);
+    transition: ease-in 0.5s;
+    &:focus {
+      border-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+        0 0 8px rgba(0, 0, 0, 0.6);
+      transition: ease-in 0.5s;
+      outline: 0 none;
+    }
+  }
+  &btn {
+    padding: 15px 30px;
+    border-radius: 0px !important;
+  }
+}
+
+.divider {
+  width: 30%;
+  height: 10px;
+  margin-bottom: 10px;
+  background-color: #000;
+}
+
+.blog- {
+  &date {
+    font-size: 16px;
+    font-weight: 800;
+    font-family: SFProBold;
+  }
+  &title {
+    font-weight: 800;
+    font-family: SFProBold;
+  }
+  &link {
+    color: #000;
+    transition: 0.35s ease-in;
+    text-decoration: underline;
+    margin-top: -5px !important;
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  &content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: SFProBold;
+      margin-bottom: 10px;
+    }
+    p {
+      font-family: SFProRegular !important;
+    }
+  }
+  &author {
+    font-size: 16px;
+  }
+
+  &link-3 {
+    color: #000 !important;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+    .blog-date {
+      color: #000 !important;
+    }
+  }
+}
+
+.page- {
+  &title {
+    font-family: SFProBold;
+  }
+  &content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: SFProBold;
+      margin-bottom: 10px;
+    }
+    p {
+      font-family: SFProRegular !important;
+    }
+  }
+}
+
+.title- {
+  &underline {
+    height: 3px;
+    background-color: #000;
+  }
+}
+
+.sidebar- {
+  &heading {
+    font-family: SFProBold;
+  }
+}
+
+.recent-posts {
+  text-decoration: none !important;
+  .recent-heading {
+    color: #c4c4c4 !important;
+  }
+  .recent-title {
+    color: #000;
+    line-height: 1.4;
+  }
+}
+
+.post- {
+  &title {
+    font-family: SFProBold;
+  }
+  &subtitle {
+    font-size: 14px;
+    font-family: SFProRegular;
+  }
+}
+
+.comments- {
+  &heading {
+    font-family: SFProBold;
+  }
+  &item {
+    width: 100%;
+    border-bottom: 1px solid #c4c4c4;
+  }
+}
+
+.comment-form-container {
+  border: 2px solid #c4c4c4;
+  .form-control {
+    border: none;
+    border-radius: 0px;
+    transition: ease-in 0.5s;
+    box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.08);
+    &:focus {
+      border-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+        0 0 8px rgba(0, 0, 0, 0.6);
+      transition: ease-in 0.5s;
+      outline: 0 none;
+    }
+  }
+  .label-bold {
+    font-family: SFProBold;
+  }
+  .comment-btn {
+    padding: 15px 30px;
+    border-radius: 0px !important;
+  }
+}
+
+.subcategory-name {
+  color: #25c16f;
+  font-family: SFProBold;
+}
+
+.btn-secondary-outline {
+  border-radius: 0;
+  border: 1px solid;
+  padding: 15px 30px;
+  font-family: SFProBold;
+  transition: ease-in 0.25s;
+  border-radius: 0px !important;
+  &:hover {
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  }
+}
+
+.wp-block-quote {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  border-left: 15px solid #62dcad;
+  background-color: #f7f9fa !important;
+  p {
+    font-size: 20px;
+    font-family: SFProBold !important;
+  }
+}
+
+.outright-spacer {
+  width: 95%;
+  height: 1px;
+  background-color: #c4c4c4;
+}
+
+img.blog-item- {
+  &1-img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.bg-expert {
+  background-color: #f1f1f1 !important;
+  h2 {
+    font-weight: bold;
+    font-family: SFProBold;
+  }
+  .form-control {
+    border: none;
+    border-radius: 0px;
+    transition: ease-in 0.5s;
+    box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.08);
+    &:focus {
+      border-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+        0 0 8px rgba(0, 0, 0, 0.6);
+      transition: ease-in 0.5s;
+      outline: 0 none;
+    }
+  }
+}
+
+.btn {
+  border-radius: 0px !important;
+}
+
+.share {
+  .post-link {
+    padding: 10px;
+    color: #1a7dff;
+    border-radius: 2px;
+    background-color: #f8f9fa;
+  }
+}
+
+.modal- {
+  &content {
+    border: none !important;
+    border-radius: 0px !important;
+  }
+}

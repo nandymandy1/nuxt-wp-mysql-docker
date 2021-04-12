@@ -1,0 +1,41 @@
+[
+  {
+    "name": "blogs",
+    "path": "/blogs",
+    "component": "/Users/narendramaurya/Projects/nuxt-wp-docker/nuxt/pages/blogs.vue",
+    "chunkName": "pages/blogs",
+    "children": [
+      {
+        "name": "blogs-id",
+        "path": ":id?",
+        "component": "/Users/narendramaurya/Projects/nuxt-wp-docker/nuxt/pages/blogs/_id.vue",
+        "chunkName": "pages/blogs/_id",
+        "_name": "_74400850"
+      }
+    ],
+    "_name": "_365fccad"
+  },
+  {
+    "name": "page",
+    "path": "/page",
+    "component": "/Users/narendramaurya/Projects/nuxt-wp-docker/nuxt/pages/page.vue",
+    "chunkName": "pages/page",
+    "children": [
+      {
+        "name": "page-id",
+        "path": ":id?",
+        "component": "/Users/narendramaurya/Projects/nuxt-wp-docker/nuxt/pages/page/_id.vue",
+        "chunkName": "pages/page/_id",
+        "_name": "_4265f3ce"
+      }
+    ],
+    "_name": "_c347a0ba"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/narendramaurya/Projects/nuxt-wp-docker/nuxt/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_6a0d3024"
+  }
+]
