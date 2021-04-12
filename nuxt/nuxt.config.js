@@ -55,7 +55,8 @@ export default {
   axios: {
     // baseURL: "http://codebookinc.local/wp-json/"
     // baseURL: "https://outright-dev.000webhostapp.com/wp-json/"
-    baseURL: "http://localhost:5000/wp-json/",
+    // baseURL: "http://localhost:5000/wp-json/",
+    baseURL: "http://95.216.140.76:5000/wp-json/",
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

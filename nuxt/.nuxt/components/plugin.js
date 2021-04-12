@@ -16,11 +16,11 @@ const components = {
   BlogsBlogItem3: () => import('../../components/Blogs/BlogItem3.vue' /* webpackChunkName: "components/blogs-blog-item3" */).then(c => wrapFunctional(c.default || c)),
   BlogsCategoryLayout: () => import('../../components/Blogs/BlogsCategoryLayout.vue' /* webpackChunkName: "components/blogs-category-layout" */).then(c => wrapFunctional(c.default || c)),
   BlogsLayout: () => import('../../components/Blogs/BlogsLayout.vue' /* webpackChunkName: "components/blogs-layout" */).then(c => wrapFunctional(c.default || c)),
+  ModalsNotification: () => import('../../components/Modals/Notification.vue' /* webpackChunkName: "components/modals-notification" */).then(c => wrapFunctional(c.default || c)),
+  ModalsShare: () => import('../../components/Modals/Share.vue' /* webpackChunkName: "components/modals-share" */).then(c => wrapFunctional(c.default || c)),
   CommentsCommentForm: () => import('../../components/Comments/CommentForm.vue' /* webpackChunkName: "components/comments-comment-form" */).then(c => wrapFunctional(c.default || c)),
   CommentsCommentItem: () => import('../../components/Comments/CommentItem.vue' /* webpackChunkName: "components/comments-comment-item" */).then(c => wrapFunctional(c.default || c)),
-  Comments: () => import('../../components/Comments/Comments.vue' /* webpackChunkName: "components/comments" */).then(c => wrapFunctional(c.default || c)),
-  ModalsNotification: () => import('../../components/Modals/Notification.vue' /* webpackChunkName: "components/modals-notification" */).then(c => wrapFunctional(c.default || c)),
-  ModalsShare: () => import('../../components/Modals/Share.vue' /* webpackChunkName: "components/modals-share" */).then(c => wrapFunctional(c.default || c))
+  Comments: () => import('../../components/Comments/Comments.vue' /* webpackChunkName: "components/comments" */).then(c => wrapFunctional(c.default || c))
 }
 
 for (const name in components) {
