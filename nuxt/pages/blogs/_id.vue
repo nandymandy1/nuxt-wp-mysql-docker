@@ -14,20 +14,26 @@
               :alt="`outright-${post.slug}`"
             />
             <p class="blog-date mt-3">{{ post.date }}</p>
-            <h6 class="subcategory-name">
+            <h6 :class="`subcategory-name-${post.categories[0]}`">
               {{ post.categories[0] }}
             </h6>
-            <PostHeader :post="post" @post-liked="postLiked" />
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 d-flex justify-content-center align-items-center">
+          <Author v-if="post" :author="post.author" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+           <PostHeader :post="post" @post-liked="postLiked" />
             <div class="post-subtitle mt-3 mb-1" v-if="post.subtitle">
               <p class="text-muted">{{ post.subtitle }}</p>
             </div>
             <div class="my-1" v-else />
             <div class="blog-content" v-html="post.content" />
-          </div>
         </div>
-        <div class="col-md-4 col-sm-12 pl-md-5">
-          <Author v-if="post" :author="post.author" />
-          <Sidebar :recentPosts="recentPosts" />
+        <div class="col-md-4 col-sm-12">
+            <Sidebar :recentPosts="recentPosts" />
         </div>
       </div>
       <div class="row" v-if="post">

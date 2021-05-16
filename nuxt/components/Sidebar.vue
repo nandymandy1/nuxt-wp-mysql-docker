@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar pt-md-5">
+  <div class="sidebar">
     <h4 class="sidebar-heading mb-5">Read this next</h4>
     <NuxtLink
       :to="`/blogs/${post.slug}`"

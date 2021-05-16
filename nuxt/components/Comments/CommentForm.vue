@@ -60,10 +60,14 @@
         </div>
       </div>
     </form>
+    <b-modal v-model="modalOpen" centered hide-header hide-footer>
+          <Notification  :success="success" :message="message" />
+    </b-modal>
   </div>
 </template>
 
 <script>
+import Notification from '../Modals/Notification';
 export default {
   name: "CommentForm",
   data: () => ({
@@ -73,6 +77,9 @@ export default {
       comment: "",
     },
     postingComment: false,
+    message: "",
+    success: false,
+    modalOpen: false,
   }),
   props: {
     postID: {
@@ -80,11 +87,18 @@ export default {
       required: true,
     },
   },
+  components:{
+    Notification
+  },
   methods: {
     async postComment() {
       this.postingComment = true;
       try {
-        console.log("DATA", this.req);
+        let {name, email, comment} = this.req;
+        if(!name.length || !email.length || !comment.length){
+          this.setModalStates('Your name, your email and your comment is required.', false);
+          return;
+        }
         let { data } = await this.$axios.post(
           `/outright/v1/comment/${this.postID}`,
           this.req
@@ -94,8 +108,25 @@ export default {
           email: "",
           comment: "",
         };
-      } catch (err) {}
-      this.postingComment = false;
+        this.setModalStates('Your comment posted successfully.', true);
+      } catch (err) {
+        this.setModalStates('Unable to post your comment.', false);
+      } finally {
+        this.closeModal();
+        this.postingComment = false;
+      }
+    },
+    setModalStates(message, success) {
+      this.message = message;
+      this.success = success;
+      this.modalOpen = true;
+    },
+    closeModal() {
+      setTimeout(() => {
+        this.modalOpen = false;
+        this.message = "";
+        this.success = false;
+      }, 5000);
     },
   },
 };

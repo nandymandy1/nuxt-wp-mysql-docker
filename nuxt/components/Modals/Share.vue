@@ -4,43 +4,40 @@
       <p class="post-link">{{ link }}</p>
       <input type="hidden" :value="link" id="link-input" />
       <button
-        :style="{ height: '68px' }"
-        class="btn btn-light"
         @click="copyLink"
+        class="btn btn-light"
+        :style="{ height: '68px' }"
       >
         Copy
       </button>
     </div>
-    <div class="d-flex justify-content-center">
-      <a
-        class="btn btn-primary"
-        target="_blank"
-        :href="`http://www.twitter.com/share?url=${link}`"
-        >Tweet
-      </a>
-      <a
-        class="btn btn-primary"
-        :href="`https://www.facebook.com/sharer/sharer.php?u=${link}`"
-        target="_blank"
-        rel="noopener"
-      >
-        Fb Share
-      </a>
-      <a
-        class="btn btn-primary"
-        :href="`https://www.linkedin.com/sharing/share-offsite/?url=${link}`"
-        target="_blank"
-        rel="noopener"
-      >
-        Linked In
-      </a>
+    <div class="d-flex justify-content-center align-items-center">
+      <SocialButton 
+        icon="twitter"
+        social="twitter"
+        :link="`http://www.twitter.com/share?url=${link}`" 
+      />
+      <SocialButton 
+        icon="facebook" 
+        social="facebook" 
+        :link="`https://www.facebook.com/sharer/sharer.php?u=${link}`" 
+      />
+      <SocialButton 
+        icon="linkedin-in" 
+        social="linkedin" 
+        :link="`https://www.linkedin.com/sharing/share-offsite/?url=${link}`" 
+      />
     </div>
   </div>
 </template>
 
 <script>
+import SocialButton from '../SocialIconLinks';
 export default {
   name: "shareModal",
+  components:{
+    SocialButton
+  },
   computed: {
     link() {
       return window.location.href;
@@ -49,7 +46,6 @@ export default {
   methods: {
     copyLink() {
       let copyText = document.getElementById("link-input");
-      console.log("VALUE", copyText.value);
       copyText.setAttribute("type", "text");
       copyText.select();
       document.execCommand("copy");

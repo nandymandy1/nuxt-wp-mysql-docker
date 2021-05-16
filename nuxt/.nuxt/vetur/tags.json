@@ -26,6 +26,9 @@
   "Sidebar": {
     "description": "Auto imported from components/Sidebar.vue"
   },
+  "SocialIconLinks": {
+    "description": "Auto imported from components/SocialIconLinks.vue"
+  },
   "BlogsBlogItem1": {
     "description": "Auto imported from components/Blogs/BlogItem1.vue"
   },
@@ -41,12 +44,6 @@
   "BlogsLayout": {
     "description": "Auto imported from components/Blogs/BlogsLayout.vue"
   },
-  "ModalsNotification": {
-    "description": "Auto imported from components/Modals/Notification.vue"
-  },
-  "ModalsShare": {
-    "description": "Auto imported from components/Modals/Share.vue"
-  },
   "CommentsCommentForm": {
     "description": "Auto imported from components/Comments/CommentForm.vue"
   },
@@ -55,5 +52,11 @@
   },
   "Comments": {
     "description": "Auto imported from components/Comments/Comments.vue"
+  },
+  "ModalsNotification": {
+    "description": "Auto imported from components/Modals/Notification.vue"
+  },
+  "ModalsShare": {
+    "description": "Auto imported from components/Modals/Share.vue"
   }
 }

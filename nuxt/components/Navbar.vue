@@ -3,11 +3,11 @@
     type="light"
     toggleable="lg"
     variant="white"
-    class="navbar navbar-toggleable-md navbar-light bg-faded py-5"
+    class="navbar navbar-toggleable-md navbar-white bg-faded py-5"
   >
     <div class="container d-flex">
       <div class="text-center flex-grow-1">
-        <NuxtLink class="navbar-brand ml-5" to="/">
+        <NuxtLink class="navbar-brand" to="/">
           <b-img src="@/assets/icons/logo.png" />
         </NuxtLink>
       </div>
